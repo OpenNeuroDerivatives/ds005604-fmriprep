@@ -16,19 +16,22 @@ echo-planar imaging (EPI) references  with `topup` (@topup; FSL None).
 
 Anatomical data preprocessing
 
-: A total of 3 T1-weighted (T1w) images were found within the input
-BIDS dataset. Each T1w image was corrected for intensity
+: A total of 1 T1-weighted (T1w) images were found within the input
+BIDS dataset. The T1w image was corrected for intensity
 non-uniformity (INU) with `N4BiasFieldCorrection` [@n4], distributed with ANTs 2.6.2
-[@ants, RRID:SCR_004757].
+[@ants, RRID:SCR_004757], and used as T1w-reference throughout the workflow.
 The T1w-reference was then skull-stripped with a *Nipype* implementation of
 the `antsBrainExtraction.sh` workflow (from ANTs), using OASIS30ANTs
 as target template.
 Brain tissue segmentation of cerebrospinal fluid (CSF),
 white-matter (WM) and gray-matter (GM) was performed on
 the brain-extracted T1w using `fast` [FSL (version unknown), RRID:SCR_002823, @fsl_fast].
-An anatomical T1w-reference map was computed after registration of
-3 <module 'nipype.interfaces.image' from '/opt/conda/envs/fmriprep/lib/python3.12/site-packages/nipype/interfaces/image.py'> images (after INU-correction) using
-`mri_robust_template` [FreeSurfer 7.3.2, @fs_template].
+Brain surfaces were reconstructed using `recon-all` [FreeSurfer 7.3.2,
+RRID:SCR_001847, @fs_reconall], and the brain mask estimated
+previously was refined with a custom variation of the method to reconcile
+ANTs-derived and FreeSurfer-derived segmentations of the cortical
+gray-matter of Mindboggle [RRID:SCR_002438, @mindboggle].
+A T2-weighted image was used to improve pial surface refinement.
 Brain surfaces were reconstructed using `recon-all` [FreeSurfer 7.3.2,
 RRID:SCR_001847, @fs_reconall], and the brain mask estimated
 previously was refined with a custom variation of the method to reconcile
@@ -43,7 +46,7 @@ and accessed with *TemplateFlow* [24.2.2, @templateflow]:
 
 Functional data preprocessing
 
-: For each of the 12 BOLD runs found per subject (across all
+: For each of the 6 BOLD runs found per subject (across all
 tasks and sessions), the following preprocessing was performed.
 First, a reference volume was generated,
 using a custom methodology of *fMRIPrep*, for use in head motion correction.
@@ -57,7 +60,7 @@ The field coefficients were mapped on to the reference EPI using the transform.
 The BOLD reference was then co-registered to the T1w reference using
 `bbregister` (FreeSurfer) which implements boundary-based registration [@bbr].
 Co-registration was configured with six degrees of freedom.
-All resamplings can be performed with *a single interpolation
+ The aligned T2w image was used for initial co-registration.All resamplings can be performed with *a single interpolation
 step* by composing all the pertinent transformations (i.e. head-motion
 transform matrices, susceptibility distortion correction when available,
 and co-registrations to anatomical and output spaces).
