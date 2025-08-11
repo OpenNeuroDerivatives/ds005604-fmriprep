@@ -1,6 +1,6 @@
 # ds005604 - fMRIPrep derivatives
 
-This dataset is a BIDS Derivatives dataset resulting from running fMRIPrep vVERSION on [ds005604](https://openneuro.org/datasets/ds005604).
+This dataset is a BIDS Derivatives dataset resulting from running fMRIPrep v25.1.4 on [ds005604](https://openneuro.org/datasets/ds005604).
 
 ## Methods
 
