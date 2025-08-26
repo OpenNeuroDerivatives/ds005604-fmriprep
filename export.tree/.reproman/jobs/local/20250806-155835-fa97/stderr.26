@@ -1,2 +1,0 @@
-INFO:    gocryptfs not found, will not be able to use gocryptfs
-It is highly recommended to configure Git before using DataLad. Set both 'user.name' and 'user.email' configuration variables.
