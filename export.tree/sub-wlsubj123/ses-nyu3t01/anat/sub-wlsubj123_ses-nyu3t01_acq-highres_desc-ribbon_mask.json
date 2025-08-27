@@ -1,0 +1,6 @@
+{
+  "RawSources": [
+    "/scratch1/03201/jbwexler/openneuro_derivatives/derivatives/fmriprep/ds005604-fmriprep/sourcedata/raw/sub-wlsubj123/ses-nyu3t01/anat/sub-wlsubj123_ses-nyu3t01_acq-highres_T1w.nii.gz"
+  ],
+  "Type": "ROI"
+}

@@ -1,0 +1,15 @@
+{
+  "AnatomicalReference": "sub-wlsubj136_ses-nyu3t01_fmapid-auto00005_desc-epi_fieldmap.nii.gz",
+  "AssociatedCoefficients": [
+    "sub-wlsubj136_ses-nyu3t01_fmapid-auto00005_desc-coeff_fieldmap.nii.gz"
+  ],
+  "B0FieldIdentifier": "auto_00005",
+  "IntendedFor": [
+    "ses-nyu3t01/func/sub-wlsubj136_ses-nyu3t01_task-wedgering2_bold.nii.gz"
+  ],
+  "RawSources": [
+    "/scratch1/03201/jbwexler/openneuro_derivatives/derivatives/fmriprep/ds005604-fmriprep/sourcedata/raw/sub-wlsubj136/ses-nyu3t01/fmap/sub-wlsubj136_ses-nyu3t01_acq-fMRI_dir-AP_run-02_epi.nii.gz",
+    "/scratch1/03201/jbwexler/openneuro_derivatives/derivatives/fmriprep/ds005604-fmriprep/sourcedata/raw/sub-wlsubj136/ses-nyu3t01/func/sub-wlsubj136_ses-nyu3t01_task-wedgering2_bold.nii.gz"
+  ],
+  "Units": "Hz"
+}
