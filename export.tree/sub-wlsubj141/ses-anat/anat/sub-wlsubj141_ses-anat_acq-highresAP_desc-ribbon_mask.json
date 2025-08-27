@@ -1,8 +1,0 @@
-{
-  "RawSources": [
-    "/scratch1/03201/jbwexler/openneuro_derivatives/derivatives/fmriprep/ds005604-fmriprep/sourcedata/raw/sub-wlsubj141/ses-anat/anat/sub-wlsubj141_ses-anat_acq-highresAP_run-01_T1w.nii.gz",
-    "/scratch1/03201/jbwexler/openneuro_derivatives/derivatives/fmriprep/ds005604-fmriprep/sourcedata/raw/sub-wlsubj141/ses-anat/anat/sub-wlsubj141_ses-anat_acq-highresAP_run-02_T1w.nii.gz",
-    "/scratch1/03201/jbwexler/openneuro_derivatives/derivatives/fmriprep/ds005604-fmriprep/sourcedata/raw/sub-wlsubj141/ses-anat/anat/sub-wlsubj141_ses-anat_acq-highresAP_run-03_T1w.nii.gz"
-  ],
-  "Type": "ROI"
-}
